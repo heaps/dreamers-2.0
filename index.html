@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Beautiful Patterns</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./assets/css/now-ui-kit.min.css?v=1.3.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/css/demo.css" rel="stylesheet" />
+
+    <!-- manage site history -->
+    <script src="https://unpkg.com/history/umd/history.min.js"></script>
+
+</head>
+
+<body class="ecommerce-page" style="background: black">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-transparent" color-on-scroll="500">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" rel="tooltip" title="Home" data-placement="bottom" href="/#/home" onclick="loadPage('home')">
+                    <img src="./assets/img/logos/mit_02.png">&nbsp;&nbsp;&nbsp;<img src="./assets/img/logos/itesm.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEAUTIFUL PATTERNS
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" data-nav-image="./assets/img/blurred-image-1.jpg" data-color="orange">
+                <ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/#/hosts" onclick="loadPage('hosts')">
+                      <i class="now-ui-icons business_bank"></i>
+                      <p>Hosts</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"  href="/#/instructors" onclick="loadPage('instructors')">
+                      <i class="now-ui-icons education_glasses"></i>
+                      <p>Instructors</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link"  href="/#/learners" onclick="loadPage('learners')">
+                      <i class="now-ui-icons users_single-02"></i>
+                      <p>Learners</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="now-ui-icons travel_info"></i> About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">
+                        <i class="now-ui-icons ui-1_calendar-60"></i> Schedule
+                      <a class="dropdown-item" href="/#/team" onclick="loadPage('team')">
+                        <i class="now-ui-icons users_single-02"></i> Team
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="now-ui-icons business_briefcase-24"></i> Partners
+                      </a>
+                    </div>
+                  </li>
+
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="now-ui-icons business_globe"></i> Lang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">English</a>
+                      <a class="dropdown-item" href="#">Spanish</a>
+                      <a class="dropdown-item" href="#">Portuguese</a>
+                    </div>
+                  </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>   
+    <!-- End Navbar -->
+
+
+  <div id="target"></div>
+
+  <!-- modal div is used for video content -->
+  <div id='modal'></div>
+
+
+
+</body>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./assets/js/plugins/bootstrap-switch.js"></script>
+<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./assets/js/plugins/bootstrap-tagsinput.js"></script>
+<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
+<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./assets/js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="./assets/js/now-ui-kit.min.js?v=1.3.0" type="text/javascript"></script>
+<script src='./assets/js/end.js'></script>    
+
+</html>

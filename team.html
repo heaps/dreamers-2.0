@@ -1,0 +1,78 @@
+<div class="team-4" id="team">
+    <div class="container">
+        <div id="bpteam"></div>
+    </div>
+</div>
+
+
+<script>
+
+var instructors = [   
+    { name:'Abigail', img:'assets/img/instructors/abigailChoe.jpg'},
+    { name:'Aliza'  , img:'assets/img/instructors/alizaCamacho.jpg'},
+    { name:'Becky'  , img:'assets/img/instructors/beckyBell.jpg'},
+    { name:'Chessa' , img:'assets/img/instructors/chessaHoekstra.jpg'},
+    { name:'Daniela', img:'assets/img/instructors/danielaGanelin.jpg'},
+    { name:'Donna'  , img:'assets/img/instructors/donnaGan.jpg'},
+    { name:'Doroty' , img:'assets/img/instructors/dorothySun.jpg'},
+    { name:'Emily'  , img:'assets/img/instructors/emilyRogers.jpg'},
+    { name:'Erica'  , img:'assets/img/instructors/ericaYuen.jpg'},
+    { name:'Erica'  , img:'assets/img/instructors/ericaSantana.jpg'},
+    { name:'Jenelle', img:'assets/img/instructors/janelleSands.jpg'},
+    { name:'Lwin'   , img:'assets/img/instructors/lwinMoe.jpg'},
+    { name:'Melody' , img:'assets/img/instructors/melodyCao.jpg'},
+    { name:'Navil'  , img:'assets/img/instructors/navilPerez.jpg'},
+    { name:'Emma'   , img:'assets/img/instructors/emmaKing.jpg'},
+    { name:'Nidhi'  , img:'assets/img/instructors/nidhiSharma.jpg'},
+    { name:'Nomi'   , img:'assets/img/instructors/nomiVilvovsky.jpg'},
+    { name:'Olivia' , img:'assets/img/instructors/oliviaSiegel.jpg'},
+    { name:'Olivia' , img:'assets/img/instructors/oliviaWaring.jpg'},
+    { name:'Pankhuri' , img:'assets/img/instructors/pankhuriSen.jpg'},
+    { name:'Priya'    , img:'assets/img/instructors/priyaKher.jpg'},
+    { name:'Pushpita' , img:'assets/img/instructors/pushpitaBhattacharjee.jpg'},
+    { name:'Randi'    , img:'assets/img/instructors/randiWilliams.jpg'},
+    { name:'Rmani'    , img:'assets/img/instructors/rmaniHaulcy.jpg'},
+    { name:'Silvia'   , img:'assets/img/instructors/silviaVazquez.jpg'},
+    { name:'Sophie'   , img:'assets/img/instructors/sophieMori.jpg'},
+    { name:'Stephanie', img:'assets/img/instructors/stephanieHu.jpg'},
+    { name:'Veronica' , img:'assets/img/instructors/veronicaLin.jpg'},
+    { name:'Alyssa'   , img:'assets/img/instructors/alyssaDayan.jpg'},
+    { name:'Heather'  , img:'assets/img/instructors/heatherHausladen.jpg'},
+    { name:'Peniel'   , img:'assets/img/instructors/penielArgaw.jpg'},
+    { name:'Kasturi'  , img:'assets/img/instructors/kasturiShah.jpg'},
+];
+
+var team = instructors.reduce(function(previous,current,index){
+
+    // start row
+    if ( (index%6) === 0) previous += '<div class="row">';
+
+    // team member
+    previous += `
+        <div class="col-md-2">
+            <div class="card card-profile card-plain">
+                <div class="card-image">
+                    <a href="#">
+                        <img class="img img rounded" src="${current.img}" />
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">${current.name}</h4>
+                </div>
+            </div>
+        </div>`;
+
+    // end row
+    if ((index>0) && (((index+1)%6) === 0)) previous += '</div>';
+    return previous;
+},'');
+
+document.getElementById('bpteam').innerHTML = team;
+    
+</script>
+
+
+
+
+
+
